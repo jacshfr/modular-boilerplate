@@ -11,7 +11,7 @@ app.use(express.static(staticDir));
 var server = app.listen(port, function () {
 
   var host = server.address().address;
-  var port = server.address().port;
+  var port = server.address().port || 3000;
 
   console.log('Express static server serving from %s and listening at http://%s:%s', staticDir, host, port);
 
